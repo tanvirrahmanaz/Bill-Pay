@@ -61,7 +61,7 @@ A modern web application for managing and paying utility bills with a beautiful 
 
 1. **Clone & Install**
    ```bash
-   git clone https://github.com/programming-hero-web-course1/bill-pay.git
+   git clone https://github.com/tanvirrahmanaz/Bill-Pay
    cd bill-pay
    npm install
    ```
