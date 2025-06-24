@@ -1,19 +1,23 @@
-
 // src/firebase/firebase.config.js
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCgt1R6lZ7o2EuNV0DAuHfevWykCquWSA4",
-  authDomain: "bill-pay-873f7.firebaseapp.com",
-  projectId: "bill-pay-873f7",
-  storageBucket: "bill-pay-873f7.firebasestorage.app",
-  messagingSenderId: "289023800561",
-  appId: "1:289023800561:web:1819eda3f5e6f4a1212550",
-  measurementId: "G-VXTG4T8K4Z"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export default app;
+
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
+
+export default auth;
